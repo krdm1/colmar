@@ -16,14 +16,17 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  padding: 2rem 0;
 }
 
 h3 {
   font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 h4 {
   font-size: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 h5 {
@@ -54,6 +57,8 @@ a {
 }
 
 .flex-main {
+  display: flex;
+  flex-direction: column;
   width: 60%;
   padding: 2rem 1.5rem 2rem 0;
   border-right: 2px solid #d2d2d2;
@@ -64,24 +69,23 @@ a {
   width: 100%;
 }
 
+.flex-main-text {
+
+}
+
 .flex-sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  background-color: blue;
   align-self: stretch;
-  flex-basis:
-  flex-grow:
-  flex-shrink:
+  padding: 1rem 0 2rem 0;
 }
 
 .flex-bit {
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: white;
-  list-style-position: 1.5;
 }
 
 .flex-bit:hover {
@@ -93,9 +97,17 @@ a {
 }
 
 .flex-bit img {
-  padding: 1rem 1rem;
+  padding: 1rem 0 1rem 1rem;
   width: 35%;
   height: auto;
+}
+
+.flex-bit-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  padding: 0 1rem 0 1rem;
 }
 
 .flex-bit-text a {
@@ -229,10 +241,6 @@ nav li:active {
 
 .course-info {
   padding: 1rem 1rem 1.5rem 1rem;
-}
-
-.course-name {
-  line-height: 1.5;
 }
 
 .course-info h4 {
