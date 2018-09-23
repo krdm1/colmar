@@ -43,9 +43,26 @@ a {
   padding-top: 2rem;
 }
 
+/* media query for desktop view - hides mobile only elements*/
+
+@media only screen and (min-width: 480px) {
+
 .mobile {
   display: none;
 }
+
+}
+
+/* media query for mobile view - hides desktop only elements*/
+
+@media only screen and (max-width: 480px) {
+
+.desktop {
+  display: none;
+}
+
+}
+
 
 /* Flex Container Format - Used for Information and Thesis Sections */
 
@@ -70,7 +87,8 @@ a {
 }
 
 .flex-main-text {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-sidebar {
@@ -114,9 +132,6 @@ a {
   color: #3f87cd;
 }
 
-
-
-
 /* Header */
 
 nav {
@@ -151,7 +166,7 @@ nav ul {
 }
 
 nav li {
-  display: inline;
+  display: inline-block;
   padding: .75rem 1rem;
   border-radius: 0.9rem;
 }
