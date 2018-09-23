@@ -30,9 +30,80 @@ h5 {
   font-size: 0.8rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-title {
+  text-align: center;
+  padding-top: 2rem;
+}
+
 .mobile {
   display: none;
 }
+
+/* Flex Container Format - Used for Information and Thesis Sections */
+
+.flex-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 1.5rem;
+}
+
+.flex-main {
+  width: 60%;
+  padding: 2rem 1.5rem 2rem 0;
+  border-right: 2px solid #d2d2d2;
+}
+
+.flex-main img,
+.flex-main video {
+  width: 100%;
+}
+
+.flex-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  background-color: blue;
+  align-self: stretch;
+  flex-basis:
+  flex-grow:
+  flex-shrink:
+}
+
+.flex-bit {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  list-style-position: 1.5;
+}
+
+.flex-bit:hover {
+  background-color: #d2d2d2;
+}
+
+.flex-bit:hover > .info-bit-text a {
+  text-decoration: underline;
+}
+
+.flex-bit img {
+  padding: 1rem 1rem;
+  width: 35%;
+  height: auto;
+}
+
+.flex-bit-text a {
+  color: #3f87cd;
+}
+
+
+
 
 /* Header */
 
@@ -124,66 +195,12 @@ nav li:active {
   background-color: #cd853f;
 }
 
-/* Information */
-
-.info-container {
-  display: inline-flex;
-}
-
-.info-main {
-  width: 60%;
-  padding: 2rem 1.5rem;
-  line-height: 1.5;
-  flex-basis:
-  flex-grow:
-  flex-shrink
-}
-
-.info-main img {
-  width: 100%;
-}
-
-.info-sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40%;
-  padding: 2rem 0;
-  border-left: 2px solid #d2d2d2;
-  background-color: blue;
-  align-self: stretch;
-  flex-basis:
-  flex-grow:
-  flex-shrink:
-}
-
-.info-bit {
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: white;
-}
-
-.info-bit img {
-  padding: 1rem 1rem;
-  width: 35%;
-  height: auto;
-}
-
-.info-bit:hover {
-  background-color: #d2d2d2;
-}
 
 /* Course Section */
 
 .course-section{
   width: 100%;
   background-color: #d2d2d2;
-}
-
-.section-title {
-  text-align: center;
-  padding-top: 2rem;
 }
 
 .course-container {
