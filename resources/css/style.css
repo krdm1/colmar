@@ -6,34 +6,72 @@ html {
   color: #666666;
 }
 
-/* Header */
-
-header {
-  height: 4rem;
-  background-color: blue;
+h1, h2, h3 {
+  font-weight: bold;
 }
 
-nav .container {
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+}
+
+a:hover{
+  color: #000066;
+  transition: color 500ms ease 100ms;
+}
+
+/* Header */
+
+nav {
   display: inline-flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  width: 100%;
+  background-color: white;
 }
 
 nav div {
   display: flex;
   align-items: center;
+}
+
+.logo {
+  height: 2rem;
   padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
-.menu ul{
-  display: inline-flex;
-  align-items: center;
-  flex
+.name {
+  font-size: 1.5rem;
 }
 
+.name strong{
+  font-weight: bold;
+}
 
+nav ul {
+  margin-right: 1.5rem;
+}
+
+nav li {
+  display: inline;
+  padding: 0 1rem;
+}
 
 .logo {
   height: 2rem;
@@ -44,14 +82,27 @@ nav div {
 .banner {
   height: 30rem;
   background-color: #d2d2d2;
-  display: flex;
+  display: inline-flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .banner img {
-  
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+.banner .container {
+  width:
+  height:
+}
+
+.button {
+  color: white;
+  background-color: #666666;
+  padding:
+  width: 100%;
 }
 
 
