@@ -6,10 +6,6 @@ html {
   color: #666666;
 }
 
-body {
-  line-height: 1.5;
-}
-
 h1, h2, h3 {
   font-weight: bold;
 }
@@ -32,11 +28,6 @@ h4 {
 
 h5 {
   font-size: 0.8rem;
-}
-
-a:hover{
-  color: #0066ff;
-  transition: color 500ms ease;
 }
 
 /* Header */
@@ -74,7 +65,17 @@ nav ul {
 
 nav li {
   display: inline;
-  padding: 0 1rem;
+  padding: .75rem 1rem;
+  border-radius: 0.9rem;
+}
+
+nav li:hover {
+  background-color: #C1DFF0;
+  transition: background-color 500ms ease;
+}
+
+nav li:active {
+  background-color: #88CCF1;
 }
 
 .logo {
@@ -99,14 +100,60 @@ nav li {
   width: 30%;
 }
 
+.banner h1 {
+  margin: 2rem 0;
+}
+
+.banner h2 {
+  margin-bottom: 1.5rem;
+}
+
 .button {
   color: white;
   background-color: #666666;
-  padding:
+  padding: 8px 0;
   width: 100%;
 }
 
+.button:hover {
+  background-color: #88CCF1;
+}
 
+/* Information */
+
+.information {
+  display: inline-flex;
+}
+
+.info-main {
+  width: 60%;
+  padding: 2rem 1.5rem;
+  line-height: 1.5;
+}
+
+.info-main img {
+  width: 100%;
+}
+
+.info-sidebar {
+  width: 40%;
+  border-left: 1px solid #666666;
+  height:
+}
+
+.info-bit {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-bit img {
+  padding: 1rem 1rem;
+}
+
+.info-bit:hover {
+  background-color: #d2d2d2;
+}
 
 /* Footer */
 
