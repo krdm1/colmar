@@ -40,14 +40,13 @@ a {
 
 .section-title {
   text-align: center;
-  padding-top: 2rem;
 }
 
 .mobile {
   display: none;
 }
 
-/* media query for desktop view - hides mobile only elements*/
+/* Universal media query for mobile view - hides desktop only elements*/
 
 @media only screen and (max-width: 480px) {
 
@@ -60,134 +59,6 @@ a {
   }
 
 }
-
-/* Flex Container Format - Used for Information and Thesis Sections */
-
-.flex-container {
-  display: inline-flex;
-  justify-content: center;
-  align-items: stretch;
-  padding: 0 1.5rem;
-}
-
-.flex-main {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  padding: 2rem 1.5rem 2rem 0;
-
-}
-
-.flex-main img,
-.flex-main video {
-  width: 100%;
-}
-
-.flex-main-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40%;
-  align-self: stretch;
-  padding: 1rem 0 2rem 0;
-}
-
-.flex-bit {
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.flex-bit:hover {
-  background-color: #d2d2d2;
-}
-
-.flex-bit:hover > .flex-bit-text a {
-  text-decoration: underline;
-}
-
-.flex-bit img {
-  padding: 1rem 0 1rem 1rem;
-  width: 35%;
-  height: auto;
-}
-
-.flex-bit-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 65%;
-  padding: 0 1rem 0 1rem;
-}
-
-.flex-bit-text a {
-  color: #3f87cd;
-}
-
-@media only screen and (max-width: 480px) {
-
-  .flex-container {
-    display: block;
-    padding: 0 1.5rem;
-  }
-
-  .flex-main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 2rem 1.5rem 2rem 0;
-  }
-  
-  #info-section .flex-main {
-    display: none;
-  }
-
-  .flex-main-text {
-    display: none;
-  }
-
-  .flex-sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    align-self: stretch;
-    padding: 1rem 0 2rem 0;
-  }
-
-
-  .flex-bit {
-    display: inline-block;
-  }
-
-  .flex-bit img {
-    width: 100%;
-    height: auto;
-  }
-
-  .flex-bit-text {
-    display: inline-block;
-    width: 100%%;
-    padding: 0 1rem 0 1rem;
-  }
-
-
-
-}
-
-
-/* Info Section Formatting Desktop Only */
-
-#info-section .flex-main {
-    border-right: 2px solid #d2d2d2;
-}
-
-/* Thesis Section only formatting */
 
 /* Header */
 
@@ -228,21 +99,29 @@ nav li {
   border-radius: 0.9rem;
 }
 
-nav li:hover {
-  background-color: #cd853f;
-  transition: background-color 250ms ease;
-}
-
-nav li:active {
-  background-color: #d89f67;
-  color: white;
-}
-
 .logo {
   height: 2rem;
 }
 
+/* header media query */
+
+@media only screen and (min-width: 481px) {
+  nav li:hover {
+    background-color: #cd853f;
+    transition: background-color 250ms ease;
+  }
+
+  nav li:active {
+    background-color: #d89f67;
+    color: white;
+  }
+}
+
 @media only screen and (max-width:480px) {
+  .menu {
+    width: 100%;
+  }
+
   nav ul .mobile {
     display: flex;
     align-items: center;
@@ -284,12 +163,13 @@ nav li:active {
   padding: 8px 0;
   width: 100%;
   text-align: center;
-
 }
 
 .button:hover {
   background-color: #cd853f;
 }
+
+/* Media Query for Banner*/
 
 @media only screen and (max-width: 480px) {
   .banner {
@@ -320,7 +200,147 @@ nav li:active {
     width: calc(100% - 2rem);
     margin: 0 1rem 2rem 1rem;
     background-color: #666666;
-    font-weight: 700;
+    font-weight: bold;
+  }
+
+}
+
+/* Flex Container Format - Used for Information and Thesis Sections */
+
+.flex-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 1.5rem;
+}
+
+.flex-main {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 2rem 1.5rem 2rem 0;
+}
+
+.flex-main img,
+.flex-main video {
+  width: 100%;
+}
+
+.flex-main-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#thesis .flex-main-text h3 {
+  padding-top: 1.5rem;
+}
+
+#info-section .flex-main {
+    border-right: 2px solid #d2d2d2;
+}
+
+#info-section .flex-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  align-self: stretch;
+  padding: 1rem 0 2rem 0;
+}
+
+#thesis .flex-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+  align-self: flex-start;
+  padding: 1rem 0 2rem 0;
+}
+
+.flex-bit {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-bit:hover {
+  background-color: #d2d2d2;
+}
+
+.flex-bit:hover > .flex-bit-text a {
+  text-decoration: underline;
+}
+
+.flex-bit img {
+  padding: 1rem 0 1rem 1rem;
+  width: 35%;
+  height: auto;
+}
+
+.flex-bit-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  padding: 0 1rem 0 1rem;
+}
+
+.flex-bit-text a {
+  color: #3f87cd;
+}
+
+/* Media query for flex sections - info-section and thesis */
+
+@media only screen and (max-width: 480px) {
+
+  .flex-container {
+    display: block;
+    padding: 0 1.5rem;
+  }
+
+  .flex-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 1.5rem 2rem 0;
+  }
+
+  #info-section .flex-main {
+    display: none;
+  }
+
+  .flex-main-text {
+    display: none;
+  }
+
+  #info-section .flex-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-self: stretch;
+    padding: 1rem 0 1rem 0;
+  }
+
+  .flex-bit {
+    display: inline-block;
+    margin-bottom: 3rem;
+  }
+
+  .flex-bit img {
+    width: 100%;
+    height: auto;
+    padding: 0 0 1rem 0;
+  }
+
+  .flex-bit-text {
+    display: inline-block;
+    width: calc(100% - 2rem);
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  #thesis .flex-sidebar {
+    display: none;
   }
 
 }
@@ -328,8 +348,7 @@ nav li:active {
 
 /* Course Section */
 
-.course-section{
-  width: 100%;
+#course-section{
   background-color: #d2d2d2;
 }
 
@@ -342,14 +361,14 @@ nav li:active {
   padding: 2rem 4.5rem;
 }
 
+.course-row {
+  display: flex;
+}
+
 .course-child {
   flex-basis: 30%;
   background-color: white;
-  margin: 0 2rem;
-}
-
-.course-child:hover{
-  box-shadow: 10px 10px 5px grey;
+  margin: 2rem 2rem;
 }
 
 .course-child img {
@@ -362,8 +381,59 @@ nav li:active {
 
 .course-info h4 {
   padding: 0.5rem 0;
+}
+
+/* Media query - course section */
+
+@media only screen and (min-width: 481px) {
+  .course-child:hover{
+    box-shadow: 10px 10px 5px grey;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  #course-section {
+    background-color: white;
+    border-top: 0.5px solid #d2d2d2;
+    border-bottom: 0.5px solid #d2d2d2;
+    padding: 2rem 1rem;
+  }
+
+  .course-container {
+    flex-direction: column;
+    padding: 0 0 0 0;
+  }
+
+  .course-row {
+    flex-direction: column;
+  }
+
+  .course-child {
+    background-color: #d2d2d2;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .course-child:hover {
+    background-color: #666666;
+  }
+
+  .course-info {
+    padding: 1rem 0 1.5rem 1rem;
+  }
+
+  .course-info:hover  {
+        color: white;
+  }
+
+  .course-child img,
+  .course-info h4 {
+    display: none;
+  }
 
 }
+
 
 /* Footer */
 
@@ -386,4 +456,14 @@ footer a:hover{
 
 footer a:active{
   text-shadow: 2px 2px 8px #d2d2d2;
+}
+
+@media only screen and (max-width: 480px) {
+  footer {
+    padding: 1.5rem 0 0 0;
+  }
+
+  .Copyright{
+    padding: 1rem 1rem;
+  }
 }
