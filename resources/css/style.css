@@ -1,7 +1,7 @@
 /* Universal Styles */
 
 html {
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Libre Franklin', "Helvetica", sans-serif;
   font-size: 16px;
   color: #404040;
 }
@@ -117,12 +117,15 @@ nav li {
   }
 }
 
+/* Mobile view nav bar */
+
 @media only screen and (max-width:480px) {
-  .menu {
-    width: 100%;
+
+  nav .mobile {
+    display: block;
   }
 
-  nav ul .mobile {
+  .mobile ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
