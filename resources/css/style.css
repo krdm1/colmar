@@ -131,17 +131,51 @@ a {
 
 @media only screen and (max-width: 480px) {
 
-.flex-bit {
-  display: flex;
-  flex-direction: column;
-  padding:
-}
+  .flex-container {
+    display: block;
+    padding: 0 1.5rem;
+  }
 
-.flex-bit img {
-  padding: 1rem 1rem;
-  width: 35%;
-  height: auto;
-}
+  .flex-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 1.5rem 2rem 0;
+  }
+  
+  #info-section .flex-main {
+    display: none;
+  }
+
+  .flex-main-text {
+    display: none;
+  }
+
+  .flex-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-self: stretch;
+    padding: 1rem 0 2rem 0;
+  }
+
+
+  .flex-bit {
+    display: inline-block;
+  }
+
+  .flex-bit img {
+    width: 100%;
+    height: auto;
+  }
+
+  .flex-bit-text {
+    display: inline-block;
+    width: 100%%;
+    padding: 0 1rem 0 1rem;
+  }
+
 
 
 }
