@@ -78,7 +78,7 @@ a {
   flex-direction: column;
   width: 60%;
   padding: 2rem 1.5rem 2rem 0;
-  border-right: 2px solid #d2d2d2;
+
 }
 
 .flex-main img,
@@ -130,6 +130,12 @@ a {
 
 .flex-bit-text a {
   color: #3f87cd;
+}
+
+/* Info Section Formatting Desktop Only */
+
+#info-section .flex-main {
+    border-right: 2px solid #d2d2d2;
 }
 
 /* Header */
